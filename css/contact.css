@@ -1,0 +1,52 @@
+
+.contact{
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.description {
+	background-color: #fff;
+	width: 100%;
+	z-index: 10;
+}
+.descr_text {
+	margin: 0 auto;
+	text-align: center;
+	width: 50%;
+	font-size: 30px;
+}
+.pages_container {
+	position: relative;
+	overflow-y: scroll;
+	margin: 0 auto;
+	width: 79%;
+	height: 500px;
+	background-color: #e1e8e4;
+	z-index: 1;
+}
+.pages_container::-webkit-scrollbar {
+	width: 0px;
+}
+.page {
+	position: absolute;
+	width: 90%;
+	border: 1px solid #000;
+	margin-top: 10px;
+	height: 400px;
+	z-index: 5;
+	left: 5%;
+	transition: transform 0.5s ease-in-out;
+}
+
+.down {
+	position: fixed;
+	z-index: 4;
+}
+.up {
+	top: 100%;
+	z-index: 5;
+}
+.upt {
+	top: 200%;
+}

@@ -1,0 +1,279 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+ul, a{
+	text-decoration: none;
+	list-style: none;
+}
+header {
+	height: 100px;
+	width: 100%;
+	font-family: Carlito;
+	background-image: url("../images/body-bg.gif");
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 5px solid #000;
+}
+.burger_menu_button {
+	top: 10px;
+	position: absolute;
+	left: -70px;
+	width: 60px;
+	height: 60px;
+	background-color: #e1e8e4;
+	opacity: 0.7;
+	border-radius: 30px;	
+}
+.line {
+	height: 2px;
+	background-color: #000;
+	color: #fff;
+	width: 80%;
+}
+#line_up {
+	margin-top: 17px;
+}
+.profile {
+	margin-left: 40px;
+	width: 70px;
+}
+.nav_block {
+	text-transform: uppercase;
+	margin-right: 40px;
+	display: flex;
+	flex-direction: row;
+	font-size: 20px;
+}
+.nav_item {
+	color: gray;
+	margin: 0 15px;
+}
+.nav_item:hover {
+	color: #fff;
+	border-bottom: 1px solid gray;
+}
+
+.slider {
+  width: 100%;
+  height: 86vh;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 5px solid #000;
+}
+.slider .slider-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slider .slider-item.active {
+	width: 100%;
+  opacity: 1;
+  z-index: 1;
+}
+.slider_img {
+	width: 100%;
+}
+.about {
+	line-height: 21px;
+	width: 80%;
+	font-size: 20px;
+	font-family: 'Nunito Sans', sans-serif;
+	margin: 100px auto;
+	display: flex;
+}
+.about_left {
+	width: 60%;
+}
+.about_header {
+	font-size: 35px;
+}
+.about_left_info {
+	display: flex;
+	justify-content: space-between;
+}
+.info_img {
+	width: 33%;
+	border-radius: 6px;
+}
+.info_descr {
+	font-size: 18px;
+	line-height: 18px;
+	width: 60%;
+}
+.about_right {
+	width: 30%;
+	margin-left: 10%;
+}
+.about_right_window {
+	color: #fff;
+	line-height: 30px;
+	padding: 20px 0;
+	border-radius: 6px;
+	height: 200px;
+	background-image: url("../images/body-bg.gif");
+}
+
+
+footer {
+	font-size: 18px;
+	height: 100px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: gray;
+	background-image: url("../images/body-bg.gif");
+}
+.redText {
+	color: red;
+}
+.copyright {
+	margin-left: 50px;
+}
+.social {
+	margin-right: 20px;
+	display: flex;
+	align-items: center;
+}
+.footer_social_item {
+	margin: 0 10px;
+	padding: 5px 3px 0 3px;
+}
+.footer_social_item:hover {
+	background-color: gray;
+	border-radius: 5px;
+}
+.social a img {
+	width: 40px;
+	height: 40px;
+}
+
+
+	.header_drop {
+		opacity: 0.9;
+		transition: 0.3s;
+		padding-bottom: 20px;
+		right: -30%;
+	}
+	.header_remove {
+		padding-bottom: 0;
+		right: -100%;
+	}
+	.burger_menu_drop {
+		transition: 0.3s;
+		left: 0;
+		margin-left: 20px;
+	}
+	.burger_menu_remove {
+		margin: 0;
+		left: -70px;
+	}
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+	.slider {
+		height: 500px;
+	}
+	.slider_img {
+		height: 100%;
+	}
+	.about {
+		flex-direction: column;
+		align-items: center;
+	}
+	.about_left {
+		width: 100%;
+	}
+	.about_right {
+		width: 100%;
+		margin: 0;
+	}
+}
+@media screen and (max-width: 645px) {
+	header {
+		height: 100vh;
+		right: -100%;
+		position: fixed;
+		z-index: 100;
+	}
+	.nav_block {
+		position: absolute;
+		top: 10px;
+		right: 27%;
+		font-size: 26px;
+		flex-direction: column;
+	}
+	.nav_item {
+		margin: 10px 0;
+		float: right;
+	}
+
+	.slider {
+		margin-bottom: -100px;
+		height: 350px;
+	}
+	.about_left_info {
+		flex-direction: column;
+	}
+	.info_img {
+		width: 200px;
+		height: 170px;
+		padding-bottom: 20px;
+	}
+	.info_descr {
+		width: 100%;
+		font-size: 28px;
+		line-height: 1;
+	}
+	.info_text {
+		font-size: 25px;
+		line-height: 0.9;
+	}
+	.works_link {
+		font-size: 30px;
+	}
+	.logo {
+		display: none;
+	}
+
+}
+@media screen and (max-width: 530px) {
+	.burger_menu_button {
+		z-index: 1000;
+	}
+	.nav_block {
+		z-index: 10;
+		padding: 0;
+	}
+	.slider {
+		display: none;
+	}
+	.about {
+		margin-top: 0;
+	}
+	footer {
+		font-size: 23px;
+		flex-direction: column;
+	}
+	.copyright {
+		margin: 10px 0 0 0;
+	}
+	.social {
+		margin: 0;
+	}
+}
+@media screen and (max-width: 364px) {
+	.nav_block {
+		right: 23%;
+		font-size: 20px;
+	}
+}
