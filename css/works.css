@@ -10,7 +10,10 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	padding-bottom: 50px;
+	padding-bottom: 150px;
+}
+.container-dark-theme {
+	background-color: #111212;
 }
 .works_description {
 	text-align: center;
@@ -54,7 +57,7 @@
 	visibility: visible;
   	margin-top: 100px;
 	height: 230px;
-	width: 700px;
+	width: 70%;
 }
 .img_drop {
 	opacity: 0;

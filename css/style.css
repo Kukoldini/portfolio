@@ -2,6 +2,9 @@ body {
 	margin: 0;
 	padding: 0;
 }
+hr {
+	border: none;
+}
 ul, a{
 	text-decoration: none;
 	list-style: none;
@@ -26,12 +29,6 @@ header {
 	opacity: 0.7;
 	border-radius: 30px;	
 }
-.line {
-	height: 2px;
-	background-color: #000;
-	color: #fff;
-	width: 80%;
-}
 #line_up {
 	margin-top: 17px;
 }
@@ -39,6 +36,37 @@ header {
 	margin-left: 40px;
 	width: 70px;
 }
+/*Theme Styles*/
+.light-theme {
+	margin-left: 200px;
+	position: absolute;
+	width: 50px;
+	height: 20px;
+	background-color: #fff;
+	opacity: 0.3;
+	border-radius: 30px;
+}
+.theme-switch {
+	position: relative;
+	cursor: pointer;
+	background-color: #000;
+	height: 100%;
+	width: 40%;
+	border-radius: 30px;
+	transition: 0.3s;
+}
+.theme-switch-to-right {
+	left: 60%;
+}
+.theme-switch-to-left {
+	left: 0;
+}
+.dark-theme {
+	transition: 0.2s;
+	background-color: #0e0f0f;
+	color: gray;
+}
+
 .nav_block {
 	text-transform: uppercase;
 	margin-right: 40px;
@@ -119,6 +147,11 @@ header {
 	background-image: url("../images/body-bg.gif");
 }
 
+.line {
+	height: 2px;
+	background-color: gray;
+	width: 80%;
+}
 
 footer {
 	font-size: 18px;
@@ -243,6 +276,10 @@ footer {
 	}
 	.logo {
 		display: none;
+	}
+	.light-theme {
+		right: 34%;
+		bottom: 10%;
 	}
 
 }

@@ -1,3 +1,14 @@
+var body = document.querySelector('body');
+var savedTheme = localStorage.getItem('theme');
+var container = document.querySelector('.container');
+
+if (savedTheme === 'dark') {
+  body.classList.add('dark-theme');
+  container.classList.add('container-dark-theme');
+} else {
+  body.classList.remove('dark-theme');
+  container.classList.remove('container-dark-theme');
+}
 
 if (window.innerWidth >= 440) {
 	var workImgs = document.querySelectorAll('.work_img');

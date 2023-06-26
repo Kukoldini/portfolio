@@ -33,3 +33,36 @@ function burgerMenuDrop() {
 }
 
 burgerMenuButton.addEventListener('click', burgerMenuDrop);
+
+//Light Theme
+
+
+var themeSwitch = document.querySelector('.theme-switch');
+var body = document.querySelector('body');
+
+if (localStorage.getItem('theme') === 'dark') {
+  themeSwitch.classList.remove('theme-switch-to-left')
+  themeSwitch.classList.add('theme-switch-to-right');
+  body.classList.add('dark-theme');  
+} else {
+  themeSwitch.classList.remove('theme-switch-to-right')
+  themeSwitch.classList.add('theme-switch-to-left');
+  body.classList.remove('dark-theme');
+}
+
+function lightThemeSwitch() {
+  let themeSwitchPosition = getComputedStyle(themeSwitch).getPropertyValue('left').trim();
+  if (themeSwitchPosition === '0px') {
+    themeSwitch.classList.remove('theme-switch-to-left')
+    themeSwitch.classList.add('theme-switch-to-right');
+    body.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    themeSwitch.classList.remove('theme-switch-to-right')
+    themeSwitch.classList.add('theme-switch-to-left');
+    body.classList.remove('dark-theme');
+    localStorage.setItem('theme', 'light');
+  }
+}
+
+themeSwitch.addEventListener('click', lightThemeSwitch);
