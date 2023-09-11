@@ -1,4 +1,4 @@
-/*let slider = document.querySelector('.slider');
+let slider = document.querySelector('.slider');
 let sliderWrapper = document.querySelector('.slider-wrapper');
 let offset = 0;
 
