@@ -3,7 +3,8 @@
 	font-weight: normal;
 }
 .container {
-	background-color: #e1e8e4;
+	background: transparent;
+	backdrop-filter: blur(100px);
 	font-family: 'Nunito Sans', sans-serif;
 	margin: 0 auto;
 	width: 1000px;
@@ -16,11 +17,11 @@
 	background-color: #111212;
 }
 .works_description {
+	margin-top: 30px;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 100px 0;
 }
 .desc_header {
 	font-weight: bold;
@@ -36,9 +37,8 @@
 	position: relative;
 	display: inherit;	
 	flex-direction: column;
-	align-items: center;	
-	height: 400px;
-	margin: 50px 0;
+	align-items: center;
+	height: 500px;
 }
 .work_drop_info {
 	padding: 20px;
@@ -55,7 +55,7 @@
 	opacity: 0.9;
 	transition: 0.4s;  	
 	visibility: visible;
-  	margin-top: 100px;
+  	margin-top: 150px;
 	height: 230px;
 	width: 70%;
 }

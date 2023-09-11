@@ -1,6 +1,11 @@
 body {
+	color: gray;
+	background: url("../images/bgi.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
 	margin: 0;
 	padding: 0;
+	z-index: 1;
 }
 hr {
 	border: none;
@@ -10,16 +15,29 @@ ul, a{
 	list-style: none;
 }
 header {
-	height: 100px;
+	z-index: 10;
+	transition: 0.3s;
+	height: 70px;
 	width: 100%;
 	font-family: Carlito;
 	background-image: url("../images/body-bg.gif");
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	border-bottom: 5px solid #000;
+	border-bottom: 3px solid rgba(100, 0, 1, .5);
+}
+.overlay {
+	transition: 0.5s;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	background-color: #000;
+	z-index: 1;
+	display: none;
 }
 .burger_menu_button {
+	transition: 0.3s;
 	top: 10px;
 	position: absolute;
 	left: -70px;
@@ -36,43 +54,14 @@ header {
 	margin-left: 40px;
 	width: 70px;
 }
-/*Theme Styles*/
-.light-theme {
-	margin-left: 200px;
-	position: absolute;
-	width: 50px;
-	height: 20px;
-	background-color: #fff;
-	opacity: 0.3;
-	border-radius: 30px;
-}
-.theme-switch {
-	position: relative;
-	cursor: pointer;
-	background-color: #000;
-	height: 100%;
-	width: 40%;
-	border-radius: 30px;
-	transition: 0.3s;
-}
-.theme-switch-to-right {
-	left: 60%;
-}
-.theme-switch-to-left {
-	left: 0;
-}
-.dark-theme {
-	transition: 0.2s;
-	background-color: #0e0f0f;
-	color: gray;
-}
+
 
 .nav_block {
 	text-transform: uppercase;
 	margin-right: 40px;
 	display: flex;
 	flex-direction: row;
-	font-size: 20px;
+	font-size: 18px;
 }
 .nav_item {
 	color: gray;
@@ -83,37 +72,45 @@ header {
 	border-bottom: 1px solid gray;
 }
 
+
 .slider {
-  width: 100%;
-  height: 86vh;
-  position: relative;
-  overflow: hidden;
-  border-bottom: 5px solid #000;
-}
-.slider .slider-item {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.slider .slider-item.active {
-	width: 100%;
-  opacity: 1;
-  z-index: 1;
-}
-.slider_img {
-	width: 100%;
-}
-.about {
-	line-height: 21px;
+	margin: 0 auto;
+	position: relative;
 	width: 80%;
+	height: 76vh;
+	top: 50px;
+	overflow: hidden;
+}
+.slider-wrapper {
+	position: absolute;
+	left: 0;
+	display: flex;
+	width: 400%;
+	height: 100%;
+	transition: 1s;
+}
+.slider-item {
+	width: 100%;
+  height: 100%;
+}
+.slider-img {
+	max-width: 100%;
+	height: 100%;
+}
+
+
+.about {
+	display: flex;
+	background: transparent;
+	backdrop-filter: blur(10px);
 	font-size: 20px;
 	font-family: 'Nunito Sans', sans-serif;
-	margin: 100px auto;
-	display: flex;
+	margin: 100px auto;	
+	padding: 0 20px 10px;
+	border-radius: 10px;
+	line-height: 21px;
+	color: gray;
+	width: 80%;
 }
 .about_left {
 	width: 60%;
@@ -134,6 +131,15 @@ header {
 	line-height: 18px;
 	width: 60%;
 }
+.works_link {
+	transition: .1s;
+	color: red;
+}
+.works_link:hover {
+	color: gray;
+	border-bottom: 1px solid red;
+}
+
 .about_right {
 	width: 30%;
 	margin-left: 10%;
@@ -147,12 +153,6 @@ header {
 	background-image: url("../images/body-bg.gif");
 }
 
-.line {
-	height: 2px;
-	background-color: gray;
-	width: 80%;
-}
-
 footer {
 	font-size: 18px;
 	height: 100px;
@@ -161,7 +161,6 @@ footer {
 	align-items: center;
 	justify-content: space-between;
 	color: gray;
-	background-image: url("../images/body-bg.gif");
 }
 .redText {
 	color: red;
@@ -187,37 +186,25 @@ footer {
 	height: 40px;
 }
 
+	.drop {
+		left: 0px;
+		margin-left: 20px;
+	}
 
 	.header_drop {
 		opacity: 0.9;
-		transition: 0.3s;
 		padding-bottom: 20px;
 		right: -30%;
 	}
-	.header_remove {
-		padding-bottom: 0;
-		right: -100%;
+	.visible {
+		display: block;
 	}
-	.burger_menu_drop {
-		transition: 0.3s;
-		left: 0;
-		margin-left: 20px;
-	}
-	.burger_menu_remove {
-		margin: 0;
-		left: -70px;
-	}
-
-
 
 
 
 @media screen and (max-width: 1024px) {
-	.slider {
-		height: 500px;
-	}
-	.slider_img {
-		height: 100%;
+	.slider-wrapper {
+		width: 300%;
 	}
 	.about {
 		flex-direction: column;
@@ -250,10 +237,7 @@ footer {
 		float: right;
 	}
 
-	.slider {
-		margin-bottom: -100px;
-		height: 350px;
-	}
+
 	.about_left_info {
 		flex-direction: column;
 	}
@@ -290,9 +274,6 @@ footer {
 	.nav_block {
 		z-index: 10;
 		padding: 0;
-	}
-	.slider {
-		display: none;
 	}
 	.about {
 		margin-top: 0;

@@ -6,6 +6,12 @@
 	margin: 0 auto;
 	padding: 100px 0;
 }
+.contact-block {
+	padding: 20px;
+	background: transparent;
+	backdrop-filter: blur(50px);
+	border-radius: 20px;
+}
 .contact-item {
 	margin: 30px 0;
 }
@@ -21,14 +27,14 @@
 }
 .contact-img {
 	border-radius: 25px;
-	background-color: #fff;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 }
 .contact-link {
 	color: gray;
 }
 .contact-link-right {
+	transition: 0.3s;
 	display: flex;
 	align-items: center;
 	font-size: 22px;
@@ -43,11 +49,7 @@
 	border: none;
 }
 .contact-link-right:hover {
-	padding: 2px 10px 2px 0;
-	background-color: gray;
 	color: orange;
-	border-radius: 5px;
-	transition: 0.1s;
 }
 
 @media screen and (max-width: 375px) {

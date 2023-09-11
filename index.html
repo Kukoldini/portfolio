@@ -9,9 +9,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Carlito&family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
 	<title>Главная</title>
 	<link rel="stylesheet" href="css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
+	<div class="overlay"></div>
 	<header class="header">
 		<div class="burger_menu_button">
 			<hr class="line" id="line_up">
@@ -21,9 +21,6 @@
 		<div class="logo">
 			<img src="images/code.svg" alt="#" class="profile">
 		</div>
-		<div class="light-theme">
-			<div class="theme-switch"></div>
-		</div>
 		<ul class="nav_block">
 			<li><a href="index.html" class="nav_item">Главная</a></li>
 			<li><a href="works.html" class="nav_item">Работы</a></li>
@@ -32,18 +29,12 @@
 	</header>
 	<main>
 		<div class="slider">
-		  <div class="slider-item active">
-		    <img src="images/frispers_slide.png" class="slider_img">
-		  </div>
-		  <div class="slider-item">
-		    <img src="images/burningman_slide.png" class="slider_img">
-		  </div>
-		  <div class="slider-item">
-		    <img src="images/gloevik_slide.png" class="slider_img">
-		  </div>
-		  <div class="slider-item">
-		    <img src="images/royalbrows_slide.png" class="slider_img">
-		  </div>
+		  	<div class="slider-wrapper">
+			    <img src="images/frispers_slide.png" class="slider-item">
+			    <img src="images/burningman_slide.png" class="slider-item">
+			    <img src="images/gloevik_slide.png" class="slider-item">
+			    <img src="images/royalbrows_slide.png" class="slider-item">
+			</div>
 		</div>
 		<div class="about">
 			<div class="about_left">
@@ -53,7 +44,7 @@
 					<div class="info_descr">Меня зовут Алексей, я - начинающий full-Stack разработчик. Занимаюсь программированием в web development уже больше полугода. За это время я обучился многим технологиям web-разработки, а так же закрепил на практике свои знания, создавая свои собственные web-сайты с использованием различных технологий</div>
 				</div>
 				<p class="info_text">Нанимая меня на работу, вы можете определить уровень моего опыта основываясь на сложности работ в моём портфолио 
-				</p><a href="works.php" class="works_link">Посмотреть работы</a>
+				</p><a href="works.html" class="works_link">Посмотреть работы</a>
 			</div>
 			<div class="about_right">
 				<p class="about_header">Мои навыки:</p>
@@ -69,7 +60,6 @@
 			</div>
 		</div>
 	</main>
-	<hr class="line">
 	<footer>
 		<p class="copyright">Сайт написан <span class="redText">Алексеем</span> &#169; 2023</p>
 		<div class="social">
