@@ -46,6 +46,9 @@
 	border-bottom: 3px solid red;
 	overflow: hidden;
 }
+.padding-offset {
+	padding-bottom: 340px;
+}
 .work_header_block {
 	z-index: 10;
 	background-image: url('../images/body-bg.gif');
@@ -64,7 +67,6 @@
 	transition: .3s ease-in-out;
 	width: 95.8%;
 	height: 190px;
-	background-color: #fff;
 	z-index: 1;
 }
 .desc_drop {
@@ -175,28 +177,34 @@
 }
 
 
+
 @media screen and (max-width: 1024px) {
 	.container {
 		width: 100%;
 	}
 	.work_drop_info {
 		height: 210px;
-	}
+		bottom: 120px;
 
+	}
+	.work_block {
+		height: auto;
+		padding-bottom: 80px;
+	}
 }
 @media screen and (max-width: 778px) {
+	.padding-offset {
+		padding-bottom: 400px;
+	}
 	.works_description {
 		width: 90%;
 		margin: 0 auto;
 		padding-top: 40px;
 	}
 	.work_drop_info {
+		padding-top: 100px;
+		height: auto;
 		width: 94%;
-	}
-}
-@media screen and (max-width: 685px) {
-	.work_drop_info {
-		height: 240px;
 	}
 }
 @media screen and (max-width: 645px) {
@@ -206,25 +214,35 @@
 	.hr {
 		width: 25%;
 	}
-	.work_drop_info {
-		width: 93%;
-	}
 }
-@media screen and (max-width: 526px) {
-	.desc_drop {
-		height: auto;
+@media screen and (max-width: 550px) {
+	.padding-offset {
+		padding-bottom: 460px;
+	}
+	footer {
+		flex-direction: column;
+		align-items: center;
+	}
+	.copyright {
+		margin: 0;
+	}
+	.social {
+		margin: 0;
 	}
 }
 @media screen and (max-width: 440px) {
-	.work_block {
-		height: auto;
-	}
 	.hr {
 		width: 16.5%;
 	}
-	.burningman {
-		padding: 0 5px;
-		background-image: url('../images/body-bg.gif');
+	h2 {
+		margin: 0;
+		font-size: 20px;
+	}
+	.work_drop_info {
+		padding-top: 140px;
+	}
+	.padding-offset {
+		padding-bottom: 530px;
 	}
 }
 @media screen and (max-width: 378px) {
@@ -240,5 +258,8 @@
 	footer {
 		font-size: 17px;
 		margin-top: 50px;
+	}
+	.padding-offset {
+		padding-bottom: 550px;
 	}
 }

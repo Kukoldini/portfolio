@@ -26,15 +26,13 @@
 	align-items: center;
 }
 .contact-img {
-	border-radius: 25px;
+	filter: invert(18%);
 	width: 40px;
 	height: 40px;
 }
-.contact-link {
-	color: gray;
-}
 .contact-link-right {
-	transition: 0.3s;
+	color: gray;
+	transition: .1s;
 	display: flex;
 	align-items: center;
 	font-size: 22px;
@@ -49,7 +47,8 @@
 	border: none;
 }
 .contact-link-right:hover {
-	color: orange;
+	color: #e1e8e4;
+	border-bottom: 1px solid red;
 }
 
 @media screen and (max-width: 375px) {

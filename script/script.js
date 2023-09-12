@@ -1,20 +1,3 @@
-/*let slider = document.querySelector('.slider');
-let sliderWrapper = document.querySelector('.slider-wrapper');
-let offset = 0;
-
-function sliderSwipe() {
-    offset = 100 + offset;
-
-    if (offset == 400) {
-        offset = 0
-        
-    }
-
-    sliderWrapper.style.left = -offset + '%';
-}
-
-setInterval(sliderSwipe, 3000);*/
-
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',

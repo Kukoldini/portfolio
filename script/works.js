@@ -20,13 +20,13 @@ for (var i = 0; i < dropInfo.length; i++) {
 		currentShowArrow.classList.toggle('minimize');
 		if (currentDropInfo.classList.contains('desc_drop')) {
 		
-			currentWorkBlock.style.padding = '0 0 320px 0';
+			currentWorkBlock.classList.toggle('padding-offset');
 			currentShowButtonText.style.margin = '17px 0 0 0';
 			currentShowButtonText.textContent = 'свернуть';
 
 		} else {
 
-			currentWorkBlock.style.padding = '0 0 110px 0';
+			currentWorkBlock.classList.toggle('padding-offset');
 			currentShowButtonText.style.margin = '0';
 			currentShowButtonText.textContent = 'развернуть';
 
