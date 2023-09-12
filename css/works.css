@@ -34,42 +34,40 @@
 }
 
 .work_block {	
+	transition: .2s;
 	position: relative;
 	display: inherit;	
 	flex-direction: column;
 	align-items: center;
 	height: 500px;
+	margin: 50px auto;
+	width: 95%;
+	padding-bottom: 60px;
+	background-image: url(../images/body-bg.gif);
+	border-end-end-radius: 30px;
+	border-end-start-radius: 30px;
+	border-bottom: 3px solid red;
+}
+.work_header_block {
+	z-index: 10;
+	background-image: url('../images/body-bg.gif');
 }
 .work_drop_info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
 	padding: 20px;
-	opacity: 0;	
 	transition: 0.3s;
-	visibility: hidden;	
 	position: absolute;
-	width: 70%;
+	width: 89%;
+	height: 300px;
+	background-color: #fff;
+	z-index: 1;
 }
 .desc_drop {
 	color: gray;
-	background-image: url(../images/body-bg.gif);
-	position: absolute;
-	opacity: 0.9;
-	transition: 0.4s;  	
-	visibility: visible;
-  	margin-top: 150px;
-	height: 230px;
-	width: 70%;
-}
-.img_drop {
-	opacity: 0;
-	padding-top: 100px;
-	transition: 0.4s;
-	visibility: hidden;
-}
-.img_return {
-	transition: 0.4s;
-	opacity: 1;
-	padding-top: 100;
-	visibility: visible;
+  	margin-top: 420px;
 }
 
 .work_header_block {
@@ -91,9 +89,10 @@
 }
 .work_img {
 	margin: 0 auto;
-	height: 400px;
-	width: 70%;
-	cursor: pointer;
+	height: auto;
+	width: 99%;
+	height: 80%;
+	z-index: 10;
 }
 .watch_link {
 	margin-bottom: -20px;
@@ -107,7 +106,28 @@
 	border-radius: 5px;
 	background-color: gray;
 }
-
+.show-btn {
+	cursor: pointer;
+	position: absolute;
+	bottom: -4px;
+	height: 65px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#show-btn {
+	padding: 0;
+	margin: 0;
+}
+.show-arrow {
+	position: absolute;
+	filter: invert(58%);
+	transform: rotate(90deg);
+	width: 40px;
+	height: 40px;
+	top: 17px;
+}
 .gloevik {
 	color: orange;
 }
@@ -165,7 +185,6 @@
 @media screen and (max-width: 645px) {
 	.work_img {
 		height: auto;
-		width: 95%;
 	}
 	.hr {
 		width: 25%;
@@ -182,12 +201,6 @@
 	}
 	.hr {
 		width: 16.5%;
-	}
-	.work_drop_info {
-		width: 89%;
-		position: relative;
-		visibility: visible;
-		opacity: 1;
 	}
 	.burningman {
 		padding: 0 5px;
