@@ -1,30 +1,40 @@
-var savedTheme = localStorage.getItem('theme');
-var container = document.querySelector('.container');
-let workBlock = document.querySelector('.work_block');
+let workBlock = document.querySelectorAll('.work_block');
+let dropInfo = document.querySelectorAll('.work_drop_info');
+let showButton = document.querySelectorAll('.show-btn');
+let showArrow = document.querySelectorAll('.show-arrow');
+let showButtonText = document.querySelectorAll('#show-btn');
 
-if (true) {
 
-	var workImgs = document.querySelectorAll('.work_img');
-	var DropDescrs = document.querySelectorAll('.work_drop_info');
+for (var i = 0; i < dropInfo.length; i++) {
 
-	for (var i = 0; i < workImgs.length; i++) {
+	let currentButton = showButton[i];
+	let currentDropInfo = dropInfo[i];
+	let currentWorkBlock = workBlock[i];
+	let currentShowArrow = showArrow[i];
+	let currentShowButtonText = showButtonText[i];
 
-		let showBtn = workImgs[i];
-		let dropInfo = DropDescrs[i];
 
-		workImg.addEventListener('click', function() {
+	currentButton.addEventListener('click', function() {
+			
+		currentDropInfo.classList.toggle('desc_drop');
+		currentShowArrow.classList.toggle('minimize');
+		if (currentDropInfo.classList.contains('desc_drop')) {
+		
+			currentWorkBlock.style.padding = '0 0 320px 0';
+			currentShowButtonText.style.margin = '17px 0 0 0';
+			currentShowButtonText.textContent = 'свернуть';
 
-			dropInfo.classList.toggle('desc_drop');
-			workBlock.style.padding = '0 0 500px 0';
+		} else {
 
-		})
-		dropInfo.addEventListener('click', function() {
+			currentWorkBlock.style.padding = '0 0 110px 0';
+			currentShowButtonText.style.margin = '0';
+			currentShowButtonText.textContent = 'развернуть';
 
-			dropInfo.classList.toggle('desc_drop');
-			workBlock.style.padding = '0';
+		}
 
-		})
 
-	}
+	})
 
 }
+
+
