@@ -9,14 +9,15 @@
 	<link href="https://fonts.googleapis.com/css2?family=Carlito&family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
 	<title>Главная</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
 </head>
 <body>
 	<div class="overlay"></div>
 	<header class="header">
-		<div class="burger_menu_button">
-			<hr class="line" id="line_up">
-			<hr class="line">
-			<hr class="line">
+		<div class="burger_menu_button border">
+			<hr class="burger-menu-button-line"/>
+			<hr class="burger-menu-button-line"/>
 		</div>
 		<div class="logo">
 			<img src="images/code.svg" alt="#" class="profile">
@@ -28,13 +29,25 @@
 		</ul>
 	</header>
 	<main>
-		<div class="slider">
-		  	<div class="slider-wrapper">
-			    <img src="images/frispers_slide.png" class="slider-item">
-			    <img src="images/burningman_slide.png" class="slider-item">
-			    <img src="images/gloevik_slide.png" class="slider-item">
-			    <img src="images/royalbrows_slide.png" class="slider-item">
+		<div class="swiper">
+			<div class="swiper-wrapper">
+			    <!-- Slides -->
+				<div class="swiper-slide">
+					<img src="images/burningman_slide.png" alt="" class="slider-img">
+				</div>
+				<div class="swiper-slide">
+					<img src="images/frispers_slide.png" alt="" class="slider-img">
+				</div>
+			  	<div class="swiper-slide">
+			  		<img src="images/gloevik_slide.png" alt="" class="slider-img">
+			  	</div>
+			    <div class="swiper-slide">
+			    	<img src="images/royalbrows_slide.png" alt="" class="slider-img">
+			    </div>
 			</div>
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-prev swiper-button"></div>
+			<div class="swiper-button-next swiper-button"></div>
 		</div>
 		<div class="about">
 			<div class="about_left">
@@ -68,6 +81,8 @@
 			<a href="https://web.telegram.org/k/#@mutalistKran" class="footer_social_item"><img src="images/telegramm.svg" alt=""></a>
 		</div>
 	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 	<script src="script/script.js"></script>
+	<script src="script/burger-menu.js"></script>
 </body>
 </html>
