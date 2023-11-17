@@ -65,8 +65,14 @@
 	padding: 20px;
 	transition: .3s ease-in-out;
 	width: 95.8%;
-	height: 190px;
+	height: 100%;
 	z-index: 1;
+}
+.work-drop-content {
+	position: absolute;
+	bottom: 10px;
+	left: 30px;
+	right: 30px;
 }
 .desc_drop {
 	color: gray;
@@ -181,11 +187,6 @@
 	.container {
 		width: 100%;
 	}
-	.work_drop_info {
-		height: 210px;
-		bottom: 120px;
-
-	}
 	.work_block {
 		height: auto;
 		padding-bottom: 80px;
@@ -193,7 +194,7 @@
 }
 @media screen and (max-width: 778px) {
 	.padding-offset {
-		padding-bottom: 400px;
+		padding-bottom: 380px;
 	}
 	.works_description {
 		width: 90%;
@@ -202,8 +203,6 @@
 	}
 	.work_drop_info {
 		padding-top: 100px;
-		height: auto;
-		width: 94%;
 	}
 }
 @media screen and (max-width: 645px) {
