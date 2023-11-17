@@ -189,13 +189,17 @@
 	}
 	.work_block {
 		height: auto;
-		padding-bottom: 80px;
+	}
+	.work_drop_info {
+		margin-bottom: 30px;
+		padding-bottom: 0;
 	}
 }
 @media screen and (max-width: 778px) {
 	.padding-offset {
 		padding-bottom: 380px;
 	}
+	
 	.works_description {
 		width: 90%;
 		margin: 0 auto;
@@ -215,7 +219,7 @@
 }
 @media screen and (max-width: 550px) {
 	.padding-offset {
-		padding-bottom: 460px;
+		padding-bottom: 400px;
 	}
 	footer {
 		flex-direction: column;
@@ -240,7 +244,7 @@
 		padding-top: 140px;
 	}
 	.padding-offset {
-		padding-bottom: 530px;
+		padding-bottom: 470px;
 	}
 }
 @media screen and (max-width: 378px) {
